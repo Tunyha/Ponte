@@ -189,3 +189,9 @@ e
 5src/main/java/hu/ponte/controller/UserController.java,1\4\147955ab8789e3e85ae005be54b8f38828134b90
 `
 0src/main/java/hu/ponte/service/EmailService.java,a\d\ad77068cf8edfeba84fd2c8408f734fa4d9b5177
+l
+<src/main/java/hu/ponte/controller/ProfileDataController.java,0\b\0bc7e1ca80c017f41b9c82909bd543687a3fd372
+_
+/src/main/java/hu/ponte/dto/ProfileDataInfo.java,5\a\5a7d43a5007c3c2587329da3ac166153a71defab
+h
+8src/main/java/hu/ponte/dto/ProfileDataUpdateCommand.java,2\4\24d339aee4262f39fa74ca011c4c1b24236f2a16

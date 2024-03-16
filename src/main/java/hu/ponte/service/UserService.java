@@ -60,7 +60,7 @@ public class UserService implements UserDetailsService {
         return modelMapper.map(toUpdate, UserSaveInfo.class);
     }
 
-    public String registerUser(UserCreateCommand command) {
+    public String registerUserByEmail(UserCreateCommand command) {
         if (userRepository.findByEmail(command.getEmail()).isPresent()) {
             return "This email is already in use";
         }

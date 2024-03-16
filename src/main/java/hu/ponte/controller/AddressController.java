@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/address")
+@RequestMapping("/api/addresses")
 @Slf4j
 @RequiredArgsConstructor
 public class AddressController {

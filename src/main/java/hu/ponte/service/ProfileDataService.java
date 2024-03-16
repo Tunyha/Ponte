@@ -1,5 +1,7 @@
 package hu.ponte.service;
 import hu.ponte.domain.ProfileData;
+import hu.ponte.dto.ProfileDataInfo;
+import hu.ponte.dto.ProfileDataUpdateCommand;
 import hu.ponte.exception.ProfileDataNotFoundException;
 import hu.ponte.repository.ProfileDataRepository;
 import lombok.AllArgsConstructor;
@@ -22,5 +24,12 @@ public class ProfileDataService {
             throw new ProfileDataNotFoundException(profileDataId);
         }
         return profileDataOptional.get();
+    }
+
+    public ProfileDataInfo update(Integer id, ProfileDataUpdateCommand command) {
+        ProfileData toUpdate = findProfileDataById(id);
+        modelMapper.getConfiguration().setSkipNullEnabled(true);
+        modelMapper.map(command, toUpdate);
+        return modelMapper.map(toUpdate, ProfileDataInfo.class);
     }
 }

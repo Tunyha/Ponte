@@ -43,7 +43,7 @@ public class UserController {
                     mediaType = "application/json"))
     @PostMapping("/register")
     public ResponseEntity<String> register(@Valid @RequestBody UserCreateCommand command) {
-        String result = userService.registerUser(command);
+        String result = userService.registerUserByEmail(command);
         return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
 
