@@ -14,7 +14,7 @@ public class PhoneNumber {
     private Integer id;
 
     @ManyToOne
-    private ProfileData profileData;
+    private CustomUser customUser;
 
     private String number;
 

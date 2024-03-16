@@ -205,3 +205,13 @@ _
 /src/main/java/hu/ponte/dto/PhoneNumberInfo.java,3\3\33e1dfe02b425fd5e79635407d0a2bf9cf397d1f
 X
 (src/main/java/hu/ponte/dto/UserInfo.java,a\2\a2759b5ce5653007b068fa4809996f02a4609267
+b
+2src/test/java/hu/ponte/unit/SwaggerConfigTest.java,b\0\b055735c5b9086d69a3c960fd99cde6d1cbe4356
+f
+6src/test/java/hu/ponte/unit/ModelMapperConfigTest.java,6\f\6fa90d98bc743fd1c909efcdb138128d19247422
+g
+7src/test/java/hu/ponte/unit/SecurityBeanConfigTest.java,9\7\97ba07b3591a822a2407c7458832e2d080350645
+]
+-src/test/java/hu/ponte/unit/UserRoleTest.java,6\5\6540a63f0f21cd69f6da879711dda64e424dc23b
+c
+3src/test/java/hu/ponte/unit/AddressServiceTest.java,9\e\9e79ea931041a7b8ae85859182375d08bda888c9

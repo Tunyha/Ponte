@@ -34,8 +34,6 @@ public class AddressService {
     private final ModelMapper modelMapper;
 
     public AddressInfo saveAddress(AddressCreateCommand command, Integer profileDataId) {
-        CustomUser currentCustomUser = getCurrentCustomUser(profileDataId);
-        validateUserPermissions(currentCustomUser, profileDataId);
         Address toSaveAddress = modelMapper.map(command, Address.class);
         toSaveAddress.setProfileData(profileDataService.findProfileDataById(profileDataId));
         Address savedAddress = addressRepository.save(toSaveAddress);
@@ -44,7 +42,6 @@ public class AddressService {
 
     public List<AddressInfo> listAddresses(Integer profileDataId) {
         CustomUser currentCustomUser = getCurrentCustomUser(profileDataId);
-        validateUserPermissions(currentCustomUser, profileDataId);
         List<AddressInfo> currentAddressesForAdmin = addressRepository.findAll(Pageable.ofSize(profileDataId)).stream()
                 .map(address -> modelMapper.map(address, AddressInfo.class))
                 .collect(Collectors.toList());
@@ -75,8 +72,6 @@ public class AddressService {
 
     public AddressInfo update(Integer addressId, AddressUpdateCommand command) {
         Address toUpdateAddress = findAddressById(addressId);
-        CustomUser currentCustomUser = getCurrentCustomUser(toUpdateAddress.getProfileData().getId());
-        validateUserPermissions(currentCustomUser, toUpdateAddress.getProfileData().getId());
         modelMapper.getConfiguration().setSkipNullEnabled(true);
         modelMapper.map(command, toUpdateAddress);
         return modelMapper.map(toUpdateAddress, AddressInfo.class);
@@ -84,8 +79,6 @@ public class AddressService {
 
     public AddressInfo logicalDelete(Integer addressId) {
         Address toLogicalDelete = findAddressById(addressId);
-        CustomUser currentCustomUser = getCurrentCustomUser(toLogicalDelete.getProfileData().getId());
-        validateUserPermissions(currentCustomUser, toLogicalDelete.getProfileData().getId());
         toLogicalDelete.setDeleted(true);
         return modelMapper.map(toLogicalDelete, AddressInfo.class);
     }
@@ -94,12 +87,5 @@ public class AddressService {
         User userInSession = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return userService.findByEmail(userInSession.getUsername())
                 .orElseThrow(() -> new ProfileDataNotFoundException(profileDataId));
-    }
-
-    private void validateUserPermissions(CustomUser currentCustomUser, Integer profileDataId) {
-        if (!(currentCustomUser.getRoles().contains(UserRole.ROLE_ADMIN) ||
-                currentCustomUser.getProfileData().getId().equals(profileDataId))) {
-            throw new ProfileDataNotFoundException(profileDataId);
-        }
     }
 }
