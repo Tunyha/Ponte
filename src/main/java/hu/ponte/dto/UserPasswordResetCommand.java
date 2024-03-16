@@ -13,7 +13,6 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 public class UserPasswordResetCommand {
 
-
     @NotBlank
     @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$",
             message = "Password must contain at least eight characters, " +

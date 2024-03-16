@@ -16,8 +16,6 @@ public class PhoneNumber {
     @ManyToOne
     private ProfileData profileData;
 
-    private String countryCode;
-
     private String number;
 
     private boolean isDeleted;

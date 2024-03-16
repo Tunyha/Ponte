@@ -1,8 +1,6 @@
 package hu.ponte.controller;
 
-import hu.ponte.dto.UserCreateCommand;
-import hu.ponte.dto.UserPasswordResetCommand;
-import hu.ponte.dto.UserSaveInfo;
+import hu.ponte.dto.*;
 import hu.ponte.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -42,7 +40,7 @@ public class UserController {
             content = @Content(
                     mediaType = "application/json"))
     @PostMapping("/register")
-    public ResponseEntity<String> register(@Valid @RequestBody UserCreateCommand command) {
+    public ResponseEntity<String> register(@Valid @RequestBody UserCreateCommandByEmail command) {
         String result = userService.registerUserByEmail(command);
         return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
@@ -82,5 +80,21 @@ public class UserController {
         String passwordResetResponse = userService.resetPassword(resetCode, command);
         return new ResponseEntity<>(passwordResetResponse, HttpStatus.OK);
     }
+
+    @Operation(summary = "Delete an User")
+    @ApiResponse(
+            responseCode = "200",
+            description = "User has been deleted",
+            content = @Content(
+                    mediaType = "application/json",
+                    schema = @Schema(implementation = AddressInfo.class)))
+    @DeleteMapping("/{userId}")
+    @Secured({"ROLE_USER", "ROLE_ADMIN"})
+    public ResponseEntity<UserInfo> delete(@PathVariable("userId") Integer userId) {
+        log.info("Http request, DELETE /api/users/{userId} with variable: " + userId);
+        UserInfo deltedUserInfo = userService.logicalDelete(userId);
+        return new ResponseEntity<>(deltedUserInfo,HttpStatus.OK);
+    }
+
 }
 

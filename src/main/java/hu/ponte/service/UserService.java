@@ -3,7 +3,8 @@ package hu.ponte.service;
 import hu.ponte.config.UserRole;
 import hu.ponte.domain.CustomUser;
 import hu.ponte.domain.ProfileData;
-import hu.ponte.dto.UserCreateCommand;
+import hu.ponte.dto.UserCreateCommandByEmail;
+import hu.ponte.dto.UserInfo;
 import hu.ponte.dto.UserPasswordResetCommand;
 import hu.ponte.dto.UserSaveInfo;
 import hu.ponte.exception.PasswordsDontMatchException;
@@ -60,7 +61,7 @@ public class UserService implements UserDetailsService {
         return modelMapper.map(toUpdate, UserSaveInfo.class);
     }
 
-    public String registerUserByEmail(UserCreateCommand command) {
+    public String registerUserByEmail(UserCreateCommandByEmail command) {
         if (userRepository.findByEmail(command.getEmail()).isPresent()) {
             return "This email is already in use";
         }
@@ -137,5 +138,11 @@ public class UserService implements UserDetailsService {
         customUser.setPassword(passwordEncoder.encode(command.getPassword1()));
         customUser.setActivation("");
         return "Password has been changed";
+    }
+
+    public UserInfo logicalDelete(Integer userId) {
+        CustomUser currentCustomUser = findUserById(userId);
+        currentCustomUser.setEnabled(false);
+        return modelMapper.map(currentCustomUser,UserInfo.class);
     }
 }

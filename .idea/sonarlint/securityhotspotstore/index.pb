@@ -195,3 +195,13 @@ _
 /src/main/java/hu/ponte/dto/ProfileDataInfo.java,5\a\5a7d43a5007c3c2587329da3ac166153a71defab
 h
 8src/main/java/hu/ponte/dto/ProfileDataUpdateCommand.java,2\4\24d339aee4262f39fa74ca011c4c1b24236f2a16
+h
+8src/main/java/hu/ponte/dto/UserCreateCommandByEmail.java,e\4\e4a038d6bc248a6266a8e5413fc6b74da97c269f
+h
+8src/main/java/hu/ponte/dto/UserCreateCommandByAdmin.java,5\b\5b4fd19cc2d1931ca5d65669bc9eec855fb4be71
+h
+8src/main/java/hu/ponte/dto/PhoneNumberCreateCommand.java,9\a\9ab45884d5021817caefaa60df1f10c8cc692c64
+_
+/src/main/java/hu/ponte/dto/PhoneNumberInfo.java,3\3\33e1dfe02b425fd5e79635407d0a2bf9cf397d1f
+X
+(src/main/java/hu/ponte/dto/UserInfo.java,a\2\a2759b5ce5653007b068fa4809996f02a4609267
