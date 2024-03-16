@@ -30,6 +30,8 @@ public class ProfileData {
 
     private String taxNumber;
 
+    private LocalDate lastLogin;
+
     @OneToMany(mappedBy = "profileData")
     private List<Address> addresslist;
 
