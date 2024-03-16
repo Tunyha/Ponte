@@ -36,15 +36,10 @@ import java.util.stream.Collectors;
 public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
-
     private EmailService emailService;
-
     private PasswordEncoder passwordEncoder;
-
     private final ModelMapper modelMapper;
-
     private final ProfileDataService profileDataService;
-
 
     public CustomUser findUserById(Integer userId) throws UserWithIdNotFoundException {
         Optional<CustomUser> userOptional = userRepository.findById(userId);
