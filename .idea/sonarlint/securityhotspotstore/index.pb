@@ -141,3 +141,17 @@ e
 5src/main/java/hu/ponte/exception/ValidationError.java,a\e\ae2e433a89e6c48e25bfd423698da7cc2d134893
 h
 8src/main/java/hu/ponte/controller/AddressController.java,f\e\fef724f28241c517fc29746c53640a667a198c7b
+b
+2src/main/java/hu/ponte/service/AddressService.java,a\a\aa7f837ccd5543690fa08ec72e9ae7ecf59dd20a
+[
++src/main/java/hu/ponte/dto/AddressInfo.java,e\1\e1b4f09de75a3e1582fe7f9b4fef39c42118b51d
+d
+4src/main/java/hu/ponte/dto/AddressCreateCommand.java,e\a\eae79a51bd5eb8bbcc6cee2061478904cfadbeb0
+`
+0src/main/java/hu/ponte/config/SwaggerConfig.java,1\b\1bd5cabe22fc8719aabc68fdd68e8a3585dc6880
+d
+4src/main/java/hu/ponte/config/ModelMapperConfig.java,0\f\0fd79a3a939bc6c7ba98798ad4842d1222dc0aaa
+f
+6src/main/java/hu/ponte/service/ProfileDataService.java,9\2\925488076b600532b7b784c0bb2dbca90c14a5ca
+r
+Bsrc/main/java/hu/ponte/exception/ProfileDataNotFoundException.java,4\1\41a38aa268b05d63161a310ccdcf044243544310

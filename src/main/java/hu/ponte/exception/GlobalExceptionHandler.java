@@ -19,4 +19,11 @@ public class GlobalExceptionHandler {
                 .collect(Collectors.toList());
         return new ResponseEntity<>(validationErrors, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(ProfileDataNotFoundException.class)
+    public ResponseEntity<List<ValidationError>> handleProfileDataNotFound(ProfileDataNotFoundException exception) {
+        ValidationError validationError = new ValidationError("profileDataId",
+                "ProfileData not found with id: " + exception.getProfileDataId());
+        return new ResponseEntity<>(List.of(validationError), HttpStatus.BAD_REQUEST);
+    }
 }
