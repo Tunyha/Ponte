@@ -135,3 +135,9 @@ k
 ;src/main/java/hu/ponte/repository/CustomUserRepository.java,0\1\015d259cc07f1606e8358625047af72269b28051
 l
 <src/main/java/hu/ponte/repository/ProfileDataRepository.java,6\7\670b8d8526e9d955d5f1299a44392c78d3cd0774
+l
+<src/main/java/hu/ponte/exception/GlobalExceptionHandler.java,e\7\e767af70249ddb3bd0fe605a0892906c59a44832
+e
+5src/main/java/hu/ponte/exception/ValidationError.java,a\e\ae2e433a89e6c48e25bfd423698da7cc2d134893
+h
+8src/main/java/hu/ponte/controller/AddressController.java,f\e\fef724f28241c517fc29746c53640a667a198c7b

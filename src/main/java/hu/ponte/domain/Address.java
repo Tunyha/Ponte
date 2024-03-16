@@ -16,8 +16,6 @@ public class Address {
     @ManyToOne
     private ProfileData profileData;
 
-    private String country;
-
     private Integer zipCode;
 
     private String city;
@@ -27,10 +25,6 @@ public class Address {
     private String streetType;
 
     private String streetNumber;
-
-    private String floor;
-
-    private String door;
 
     private boolean isDeleted;
 }
