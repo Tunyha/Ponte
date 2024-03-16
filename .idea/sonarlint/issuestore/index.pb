@@ -127,3 +127,11 @@ w
 G.idea/sonarlint/issuestore/0/c/0c4799549ebca80c86406fd218445fef27b61acc,9\3\93f8de54e7d0fbcd1bc646516a4131f497b38a3f
 w
 G.idea/sonarlint/issuestore/3/0/30f9777ea696a18aa49d3e9967e93a4276065227,b\7\b74e8c230459235775e2f7c88126ddb0ac14fa2d
+h
+8src/main/java/hu/ponte/repository/AddressRepository.java,d\f\dfae055025daedadb325dabade8ec6b629ae6cce
+l
+<src/main/java/hu/ponte/repository/PhoneNumberRepository.java,0\9\098056a56fc5e57e911a323d5721fbb8fb1bb8ec
+k
+;src/main/java/hu/ponte/repository/CustomUserRepository.java,0\1\015d259cc07f1606e8358625047af72269b28051
+l
+<src/main/java/hu/ponte/repository/ProfileDataRepository.java,6\7\670b8d8526e9d955d5f1299a44392c78d3cd0774

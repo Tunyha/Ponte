@@ -2,7 +2,6 @@ package hu.ponte.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Entity
