@@ -1,5 +1,4 @@
 package hu.ponte.service;
-
 import hu.ponte.domain.ProfileData;
 import hu.ponte.exception.ProfileDataNotFoundException;
 import hu.ponte.repository.ProfileDataRepository;
@@ -7,7 +6,6 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.Optional;
 
 @Service

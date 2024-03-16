@@ -155,3 +155,11 @@ f
 6src/main/java/hu/ponte/service/ProfileDataService.java,9\2\925488076b600532b7b784c0bb2dbca90c14a5ca
 r
 Bsrc/main/java/hu/ponte/exception/ProfileDataNotFoundException.java,4\1\41a38aa268b05d63161a310ccdcf044243544310
+f
+6src/main/java/hu/ponte/service/PhoneNumberService.java,3\3\33dea730ebbee81dcd5b70ee9e01ad6ae9d3b904
+b
+2src/main/java/hu/ponte/config/SpringWebConfig.java,0\8\08188484c8d1c1ed6ea4ac28fd41c18220e5607b
+a
+1src/main/java/hu/ponte/config/SecurityConfig.java,5\1\5153874f35dd01d488bf1efce2e17450b1f7907d
+e
+5src/main/java/hu/ponte/config/SecurityBeanConfig.java,9\1\91152637d52f24c899bac06feed9182f60483b69

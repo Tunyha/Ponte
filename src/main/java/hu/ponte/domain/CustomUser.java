@@ -1,5 +1,4 @@
 package hu.ponte.domain;
-
 import hu.ponte.config.UserRole;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +15,9 @@ public class CustomUser {
     private Integer id;
 
     private String email;
+
+    @OneToMany(mappedBy = "customUser")
+    private List<PhoneNumber> phoneNumberList;
 
     private String password;
 

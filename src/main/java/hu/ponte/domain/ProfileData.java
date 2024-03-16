@@ -1,5 +1,4 @@
 package hu.ponte.domain;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
@@ -34,6 +33,4 @@ public class ProfileData {
     @OneToMany(mappedBy = "profileData")
     private List<Address> addresslist;
 
-    @OneToMany(mappedBy = "profileData")
-    private List<PhoneNumber> phoneNumberList;
 }
