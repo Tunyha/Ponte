@@ -9,6 +9,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class ProfileData {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

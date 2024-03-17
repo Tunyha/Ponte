@@ -43,8 +43,6 @@ Q.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c
 ,src/main/java/hu/ponte/PonteApplication.java,b\d\bdb9b8e0efde61bfea06c19310916a2d2db75313
 [
 +src/main/java/hu/ponte/config/UserRole.java,6\4\645b20c28d5131547f34ff7e5ee08ee1e4675ca5
-Y
-)src/main/java/hu/ponte/domain/Adress.java,c\c\cc8d490037689c000ecade2e5ce814e6e9e176b8
 Z
 *src/main/java/hu/ponte/domain/Address.java,c\8\c884bf546391651939edb79bcfd20e513b82577c
 ^
@@ -155,8 +153,6 @@ f
 6src/main/java/hu/ponte/service/ProfileDataService.java,9\2\925488076b600532b7b784c0bb2dbca90c14a5ca
 r
 Bsrc/main/java/hu/ponte/exception/ProfileDataNotFoundException.java,4\1\41a38aa268b05d63161a310ccdcf044243544310
-f
-6src/main/java/hu/ponte/service/PhoneNumberService.java,3\3\33dea730ebbee81dcd5b70ee9e01ad6ae9d3b904
 b
 2src/main/java/hu/ponte/config/SpringWebConfig.java,0\8\08188484c8d1c1ed6ea4ac28fd41c18220e5607b
 a
@@ -177,8 +173,6 @@ Asrc/main/java/hu/ponte/exception/UserWithIdNotFoundException.java,6\2\627d6029
 ,src/main/java/hu/ponte/dto/UserSaveInfo.java,f\6\f612ceaaf17a400a48a75518034d345c44d2db23
 h
 8src/main/java/hu/ponte/dto/UserPasswordResetCommand.java,8\d\8d1da5f144834849eadbdc7aa33da8a958658537
-a
-1src/main/java/hu/ponte/dto/UserCreateCommand.java,3\e\3eb56522f2c91d9d7ebda031270e3af62fcc5ae5
 t
 Dsrc/main/java/hu/ponte/exception/UserWithEmailNotFoundException.java,7\3\739df7c35c5a23a7b835d1b671c5e0605f1762c0
 s
@@ -197,10 +191,6 @@ h
 8src/main/java/hu/ponte/dto/ProfileDataUpdateCommand.java,2\4\24d339aee4262f39fa74ca011c4c1b24236f2a16
 h
 8src/main/java/hu/ponte/dto/UserCreateCommandByEmail.java,e\4\e4a038d6bc248a6266a8e5413fc6b74da97c269f
-h
-8src/main/java/hu/ponte/dto/UserCreateCommandByAdmin.java,5\b\5b4fd19cc2d1931ca5d65669bc9eec855fb4be71
-h
-8src/main/java/hu/ponte/dto/PhoneNumberCreateCommand.java,9\a\9ab45884d5021817caefaa60df1f10c8cc692c64
 _
 /src/main/java/hu/ponte/dto/PhoneNumberInfo.java,3\3\33e1dfe02b425fd5e79635407d0a2bf9cf397d1f
 X
@@ -215,3 +205,7 @@ g
 -src/test/java/hu/ponte/unit/UserRoleTest.java,6\5\6540a63f0f21cd69f6da879711dda64e424dc23b
 c
 3src/test/java/hu/ponte/unit/AddressServiceTest.java,9\e\9e79ea931041a7b8ae85859182375d08bda888c9
+`
+0src/test/java/hu/ponte/IT/Address/AddressIT.java,5\6\56ec37976e840113ba7fbd4c06cf65f8499f26ef
+q
+Asrc/test/java/hu/ponte/IT/Address/AddressSaveAsUserOrAdminIT.java,5\1\518719435368496e8edad3253851af84ce7c31a2

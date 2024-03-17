@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class AddressCreateCommand {
 
-    @NotBlank
+    @NotNull
     @Schema(description = "The ZIP code of the Address.", example = "1234")
     private Integer zipCode;
 

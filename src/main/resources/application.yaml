@@ -10,7 +10,7 @@ spring:
     init:
       platform: postgres
   datasource:
-    url: jdbc:postgresql://localhost:5433/feedback_intern
+    url: jdbc:postgresql://localhost:5433/
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
@@ -18,7 +18,7 @@ spring:
     database: POSTGRESQL
     generate-ddl: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
     properties:
       hibernate:
         jdbc:
