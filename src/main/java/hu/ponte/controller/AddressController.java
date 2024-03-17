@@ -101,6 +101,6 @@ public class AddressController {
     public ResponseEntity<AddressInfo> delete(@PathVariable("addressId") Integer addressId) {
         log.info("Http request, DELETE /api/addresses/{addressId} with variable: " + addressId);
         AddressInfo deltedAddressInfo = addressService.logicalDelete(addressId);
-        return new ResponseEntity<>(deltedAddressInfo,HttpStatus.OK);
+        return new ResponseEntity<>(deltedAddressInfo, HttpStatus.OK);
     }
 }

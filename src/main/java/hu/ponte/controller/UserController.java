@@ -68,14 +68,15 @@ public class UserController {
     }
 
     @GetMapping("/forgottenPassword")
-    public ResponseEntity<String> forgottenPassword(@RequestParam String email){
+    public ResponseEntity<String> forgottenPassword(@RequestParam String email) {
         log.info("Http request, GET /api/users/forgottenPassword");
         String passWordEmailResponse = userService.sendForgottenEmail(email);
         return new ResponseEntity<>(passWordEmailResponse, HttpStatus.OK);
     }
+
     @PutMapping("/passwordReset/{resetCode}")
     public ResponseEntity<String> passwordReset(@PathVariable String resetCode,
-                                                @Valid @RequestBody UserPasswordResetCommand command){
+                                                @Valid @RequestBody UserPasswordResetCommand command) {
         log.info("Http request, GET /api/users/forgottenPassword");
         String passwordResetResponse = userService.resetPassword(resetCode, command);
         return new ResponseEntity<>(passwordResetResponse, HttpStatus.OK);
@@ -93,7 +94,7 @@ public class UserController {
     public ResponseEntity<UserInfo> delete(@PathVariable("userId") Integer userId) {
         log.info("Http request, DELETE /api/users/{userId} with variable: " + userId);
         UserInfo deltedUserInfo = userService.logicalDelete(userId);
-        return new ResponseEntity<>(deltedUserInfo,HttpStatus.OK);
+        return new ResponseEntity<>(deltedUserInfo, HttpStatus.OK);
     }
 
 }

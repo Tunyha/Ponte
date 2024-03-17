@@ -1,14 +1,10 @@
 package hu.ponte.unit;
 
-import hu.ponte.config.UserRole;
 import hu.ponte.domain.Address;
-import hu.ponte.domain.CustomUser;
-import hu.ponte.domain.ProfileData;
 import hu.ponte.dto.AddressCreateCommand;
 import hu.ponte.dto.AddressInfo;
 import hu.ponte.dto.AddressUpdateCommand;
 import hu.ponte.exception.AddressNotFoundException;
-import hu.ponte.exception.ProfileDataNotFoundException;
 import hu.ponte.repository.AddressRepository;
 import hu.ponte.service.AddressService;
 import hu.ponte.service.ProfileDataService;
@@ -19,25 +15,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.modelmapper.ModelMapper;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.anyInt;
+import static org.mockito.Mockito.when;
 
 class AddressServiceTest {
 

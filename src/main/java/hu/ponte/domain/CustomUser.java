@@ -1,7 +1,9 @@
 package hu.ponte.domain;
+
 import hu.ponte.config.UserRole;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.List;
 

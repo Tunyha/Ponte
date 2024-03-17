@@ -51,7 +51,7 @@ public class UserRepository {
     }
 
     public List<CustomUser> findAll() {
-        return entityManager.createQuery("SELECT c FROM CustomUser c",CustomUser.class)
+        return entityManager.createQuery("SELECT c FROM CustomUser c", CustomUser.class)
                 .getResultList();
     }
 }

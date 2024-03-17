@@ -1,4 +1,5 @@
 package hu.ponte.service;
+
 import hu.ponte.domain.ProfileData;
 import hu.ponte.dto.ProfileDataInfo;
 import hu.ponte.dto.ProfileDataUpdateCommand;
@@ -8,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Optional;
 
 @Service

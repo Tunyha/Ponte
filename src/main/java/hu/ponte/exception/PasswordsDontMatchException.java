@@ -1,4 +1,4 @@
 package hu.ponte.exception;
 
-public class PasswordsDontMatchException extends RuntimeException{
+public class PasswordsDontMatchException extends RuntimeException {
 }

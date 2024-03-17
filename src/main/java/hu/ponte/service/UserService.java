@@ -143,6 +143,6 @@ public class UserService implements UserDetailsService {
     public UserInfo logicalDelete(Integer userId) {
         CustomUser currentCustomUser = findUserById(userId);
         currentCustomUser.setEnabled(false);
-        return modelMapper.map(currentCustomUser,UserInfo.class);
+        return modelMapper.map(currentCustomUser, UserInfo.class);
     }
 }

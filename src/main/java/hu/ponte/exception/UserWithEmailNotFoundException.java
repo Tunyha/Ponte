@@ -5,6 +5,6 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class UserWithEmailNotFoundException extends RuntimeException{
+public class UserWithEmailNotFoundException extends RuntimeException {
     private final String userEmail;
 }
